@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Lab1CSharp"
         xmlns:views="clr-namespace:Lab1CSharp.Views"
         mc:Ignorable="d"
-        Title="Birthdate Analyser" Height="450" Width="800">
+        Title="Birthdate Analyser" Height="220" Width="300" MinHeight="200" MinWidth="280">
     <Grid>
         <views:BirthdateAnalyserView></views:BirthdateAnalyserView>
     </Grid>
