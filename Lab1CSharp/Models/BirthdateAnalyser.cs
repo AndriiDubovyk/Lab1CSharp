@@ -10,6 +10,7 @@ namespace Lab1CSharp.Models
     {
         #region Fields
         private DateTime _birthdate;
+        private DateTime _todayDate;
         #endregion
 
         #region Properties
@@ -18,18 +19,31 @@ namespace Lab1CSharp.Models
             get { return _birthdate; }
             set { _birthdate = value; }
         }
+
+        public DateTime TodayDate
+        {
+            get { return _todayDate; }
+            set { _todayDate = value; }
+        }
         #endregion
 
         public BirthdateAnalyser(DateTime birthdate)
         {
             _birthdate = birthdate;
+            _todayDate = DateTime.Today;
+        }
+
+        public BirthdateAnalyser(DateTime birthdate, DateTime todayDate)
+        {
+            _birthdate = birthdate;
+            _todayDate = todayDate;
         }
 
         public int GetAge()
         {
-            int yearsDifference = DateTime.Today.Year - Birthdate.Year;
-            int monthDifference = DateTime.Today.Month - Birthdate.Month;
-            int daysDifference = DateTime.Today.Day - Birthdate.Day;
+            int yearsDifference = TodayDate.Year- Birthdate.Year;
+            int monthDifference = TodayDate.Month - Birthdate.Month;
+            int daysDifference = TodayDate.Day - Birthdate.Day;
             if(monthDifference>0 || (monthDifference == 0 && daysDifference >= 0))
             {
                 return yearsDifference; // already celebrated the birthday in this year
