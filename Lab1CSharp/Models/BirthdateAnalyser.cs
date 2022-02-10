@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1CSharp.Models
 {
-    class BirthdateAnalyser
+    public class BirthdateAnalyser
     {
         #region Fields
         private DateTime _birthdate;
