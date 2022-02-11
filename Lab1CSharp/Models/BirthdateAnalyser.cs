@@ -93,5 +93,11 @@ namespace Lab1CSharp.Models
         {
             return (TodayDate.Month == Birthdate.Month && TodayDate.Day == Birthdate.Day);
         }
+
+        public bool ValidateBirthdate()
+        {
+            // return false if the user has not yet been born or is older than 135
+            return (Birthdate.CompareTo(TodayDate) <= 0 && GetAge() <= 135);
+        }
     }
 }

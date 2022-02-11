@@ -97,5 +97,26 @@ namespace Analyser.Tests
             Assert.True(actual1);
             Assert.False(actual2);
         }
+
+        [Fact]
+        public void ValidateBirthdateTest()
+        {
+            //Arrange
+            var todayDate = new DateTime(2021, 02, 11);
+            var ba1 = new BirthdateAnalyser(new DateTime(2003, 08, 01), todayDate);
+            var ba2 = new BirthdateAnalyser(new DateTime(2022, 12, 22), todayDate);
+            var ba3 = new BirthdateAnalyser(new DateTime(1803, 01, 01), todayDate);
+
+
+            //Act
+            var actual1 = ba1.ValidateBirthdate();
+            var actual2 = ba2.ValidateBirthdate();
+            var actual3 = ba3.ValidateBirthdate();
+
+            //Assert
+            Assert.True(actual1);
+            Assert.False(actual2);
+            Assert.False(actual3);
+        }
     }
 }
