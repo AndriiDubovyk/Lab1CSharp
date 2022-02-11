@@ -90,8 +90,8 @@ namespace Analyser.Tests
 
 
             //Act
-            var actual1 = ba1.birthdayIsToday();
-            var actual2 = ba2.birthdayIsToday();
+            var actual1 = ba1.BirthdayIsToday();
+            var actual2 = ba2.BirthdayIsToday();
 
             //Assert
             Assert.True(actual1);

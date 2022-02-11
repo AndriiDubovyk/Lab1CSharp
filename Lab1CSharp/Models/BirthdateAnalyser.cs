@@ -89,7 +89,7 @@ namespace Lab1CSharp.Models
             return "Capricorn";
         }
 
-        public bool birthdayIsToday()
+        public bool BirthdayIsToday()
         {
             return (TodayDate.Month == Birthdate.Month && TodayDate.Day == Birthdate.Day);
         }
