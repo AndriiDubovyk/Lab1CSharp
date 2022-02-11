@@ -19,10 +19,10 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <DatePicker Name="BirthdatePicker" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" MaxWidth="300" Margin="5"></DatePicker>
+        <DatePicker Name="BirthdatePicker" Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" MaxWidth="300" Margin="5" SelectedDate="{Binding Birthdate}"></DatePicker>
         <Button Name="ButtonOK" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Height="25" Width="75" Margin="5" Content="OK" Command ="{Binding OKCommand}"></Button>
-        <tools:TextBlockWithCaption x:Name="TbAge" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Caption="Age:" Text="TestValue"></tools:TextBlockWithCaption>
-        <tools:TextBlockWithCaption x:Name="TbWZodiacSign" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Caption="Zodiac Sign(Western):" Text="TestValue"></tools:TextBlockWithCaption>
-        <tools:TextBlockWithCaption x:Name="TbCZodiacSign" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Caption="Zodiac Sign(Chinese):" Text="TestValue"></tools:TextBlockWithCaption>
+        <tools:TextBlockWithCaption x:Name="TbAge" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Caption="Age:" Text="{Binding Age, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></tools:TextBlockWithCaption>
+        <tools:TextBlockWithCaption x:Name="TbWZodiacSign" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Caption="Zodiac Sign(Western):" Text="{Binding WesternZodiacSign, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></tools:TextBlockWithCaption>
+        <tools:TextBlockWithCaption x:Name="TbCZodiacSign" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Caption="Zodiac Sign(Chinese):" Text="{Binding ChineseZodiacSign, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></tools:TextBlockWithCaption>
     </Grid>
 </UserControl>

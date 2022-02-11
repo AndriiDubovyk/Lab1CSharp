@@ -48,5 +48,13 @@ namespace Lab1CSharp.Tools
                 TbValue.Text=value;
             }
         }
+
+        public static readonly DependencyProperty TextProperty = DependencyProperty.Register
+        (
+            "Text",
+            typeof(string),
+            typeof(TextBlockWithCaption),
+            new PropertyMetadata(null)
+        );
     }
 }
