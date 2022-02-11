@@ -66,12 +66,12 @@ namespace Lab1CSharp.Models
             return yearsDifference - 1; // will celebrate the birthday
         }
 
-        public String GetChineseZodiacSign()
+        public string GetChineseZodiacSign()
         {
             return ChineseZodiacSignsNames[Birthdate.Year%12];
         }
 
-        public String GetWesternZodiacSign()
+        public string GetWesternZodiacSign()
         {
             double monthDotDay = Birthdate.Month + Birthdate.Day/100.0;
             if (monthDotDay < 1.20) return "Capricorn";
