@@ -27,6 +27,21 @@ namespace Lab1CSharp.Models
         }
         #endregion
 
+        private static String[] ChineseZodiacSignsNames = {
+            "Monkey",
+            "Rooster",
+            "Dog",
+            "Pig",
+            "Rat",
+            "Ox",
+            "Tiger",
+            "Rabbit",
+            "Dragon",
+            "Snake",
+            "Horse",
+            "Goat"
+        };
+
         public BirthdateAnalyser(DateTime birthdate)
         {
             _birthdate = birthdate;
@@ -49,6 +64,11 @@ namespace Lab1CSharp.Models
                 return yearsDifference; // already celebrated the birthday in this year
             }
             return yearsDifference - 1; // will celebrate the birthday
+        }
+
+        public String GetChineseZodiacSign()
+        {
+            return ChineseZodiacSignsNames[Birthdate.Year%12];
         }
 
     }

@@ -29,5 +29,28 @@ namespace Analyser.Tests
             Assert.Equal(expected2, actual2);
             Assert.Equal(expected3, actual3);
         }
+
+        [Fact]
+        public void GetChineseZodiacSignTest()
+        {
+            //Arrange
+            var ba1 = new BirthdateAnalyser(new DateTime(2003, 05, 05));
+            var ba2 = new BirthdateAnalyser(new DateTime(1992, 01, 01));
+            var ba3 = new BirthdateAnalyser(new DateTime(2000, 02, 11));
+
+            var expected1 = "Goat";
+            var expected2 = "Monkey";
+            var expected3 = "Dragon";
+
+            //Act
+            var actual1 = ba1.GetChineseZodiacSign();
+            var actual2 = ba2.GetChineseZodiacSign();
+            var actual3 = ba3.GetChineseZodiacSign();
+
+            //Assert
+            Assert.Equal(expected1, actual1);
+            Assert.Equal(expected2, actual2);
+            Assert.Equal(expected3, actual3);
+        }
     }
 }
