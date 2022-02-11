@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Lab1CSharp.ViewModels;
 
 namespace Lab1CSharp.Views
 {
@@ -20,9 +21,12 @@ namespace Lab1CSharp.Views
     /// </summary>
     public partial class BirthdateAnalyserView : UserControl
     {
+        private BirthdateAnalyserViewModel _viewModel;
+
         public BirthdateAnalyserView()
         {
             InitializeComponent();
+            DataContext = _viewModel = new BirthdateAnalyserViewModel();
         }
     }
 }
