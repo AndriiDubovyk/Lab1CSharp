@@ -18,7 +18,7 @@ namespace Lab1CSharp.ViewModels
         private string _age;
         private string _westernZodiacSign;
         private string _chineseZodiacSign;
-        private RelayCommand<object> _okCommand;
+        private RelayCommand<object> _analyseCommand;
         #endregion
 
         #region Properties
@@ -74,16 +74,16 @@ namespace Lab1CSharp.ViewModels
         }
 
 
-        public RelayCommand<object> OKCommand
+        public RelayCommand<object> AnalyseCommand
         {
             get
             {
-                return _okCommand ??= new RelayCommand<object>(_ => OK(), CanExecute);
+                return _analyseCommand ??= new RelayCommand<object>(_ => Analyse(), CanExecute);
             }
         }
         #endregion
 
-        private void OK()
+        private void Analyse()
         {
             if (_birthdateAnalyser.ValidateBirthdate())
             {
