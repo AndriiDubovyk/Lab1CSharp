@@ -79,5 +79,23 @@ namespace Analyser.Tests
             Assert.Equal(expected3, actual3);
             Assert.Equal(expected4, actual4);
         }
+
+        [Fact]
+        public void BirthdayIsTodayTest()
+        {
+            //Arrange
+            var todayDate = new DateTime(2022, 08, 01);
+            var ba1 = new BirthdateAnalyser(new DateTime(2003, 08, 01), todayDate);
+            var ba2 = new BirthdateAnalyser(new DateTime(1992, 12, 22), todayDate);
+
+
+            //Act
+            var actual1 = ba1.birthdayIsToday();
+            var actual2 = ba2.birthdayIsToday();
+
+            //Assert
+            Assert.True(actual1);
+            Assert.False(actual2);
+        }
     }
 }

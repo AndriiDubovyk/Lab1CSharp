@@ -88,5 +88,10 @@ namespace Lab1CSharp.Models
             if (monthDotDay < 12.22) return "Sagittarius";
             return "Capricorn";
         }
+
+        public bool birthdayIsToday()
+        {
+            return (TodayDate.Month == Birthdate.Month && TodayDate.Day == Birthdate.Day);
+        }
     }
 }
