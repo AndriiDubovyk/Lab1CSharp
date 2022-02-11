@@ -71,5 +71,22 @@ namespace Lab1CSharp.Models
             return ChineseZodiacSignsNames[Birthdate.Year%12];
         }
 
+        public String GetWesternZodiacSign()
+        {
+            double monthDotDay = Birthdate.Month + Birthdate.Day/100.0;
+            if (monthDotDay < 1.20) return "Capricorn";
+            if (monthDotDay < 2.19) return "Aquarius";
+            if (monthDotDay < 3.21) return "Pisces";
+            if (monthDotDay < 4.20) return "Aries";
+            if (monthDotDay < 5.21) return "Taurus";
+            if (monthDotDay < 6.22) return "Gemini";
+            if (monthDotDay < 7.23) return "Cancer";
+            if (monthDotDay < 8.23) return "Leo";
+            if (monthDotDay < 9.23) return "Virgo";
+            if (monthDotDay < 10.23) return "Libra";
+            if (monthDotDay < 11.23) return "Scorpio";
+            if (monthDotDay < 12.22) return "Sagittarius";
+            return "Capricorn";
+        }
     }
 }
